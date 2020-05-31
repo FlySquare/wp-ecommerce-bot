@@ -6,10 +6,10 @@
 */
 
 // Connection variables
-$host = "89.107.228.51"; // MySQL host name eg. localhost
-$user = "bolfpsco"; // MySQL user. eg. root ( if your on localserver)
-$password = "0#M4Qr!J3Y5qua"; // MySQL user password  (if password is not set for your root user then keep it empty )
-$database = "bolfpsco_urun"; // MySQL Database name
+$host = ""; // MySQL host name eg. localhost
+$user = ""; // MySQL user. eg. root ( if your on localserver)
+$password = ""; // MySQL user password  (if password is not set for your root user then keep it empty )
+$database = ""; // MySQL Database name
 // Connect to MySQL Database
 $con = new mysqli($host, $user, $password, $database);
 $con->set_charset("utf8");
