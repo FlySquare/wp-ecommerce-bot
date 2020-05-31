@@ -27,7 +27,9 @@ $sonfiyat = $dizi3[0].".".$dizi3[1];
 $urunicerikt= $namedizi2[0];
 $urunfoto = "https://nevatoptan.net/".$dizi[1];
 
-
+if (isset( $_GET['sql'])) {
+$delete = $db->exec("DELETE FROM veriler");
+};
 
 
 if (isset( $_GET['link'])) {
@@ -70,6 +72,7 @@ $satissay = $sorgu->fetchColumn();
 ?>
 
 <!DOCTYPE html>
+
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
@@ -84,6 +87,8 @@ $satissay = $sorgu->fetchColumn();
     <form class="register-form">
       <input  type="text" readonly placeholder="veri" value="<?php echo "Toplam: ".$satissay." Ürün Eklendi";?>"/>
       <button  onclick="Export()">CSV DOSYASINI AL</button>
+			<p></p>
+			  <button name="sql">SQL BOŞALT</button>
       <p class="message"><a href="#">Ürün Ekle</a></p>
     </form>
     <form class="login-form">
@@ -114,6 +119,7 @@ $satissay = $sorgu->fetchColumn();
               window.open("veriexport/export.php", '_blank');
           }
       }
+
   </script>
 </body>
 </html>
